@@ -1,0 +1,1 @@
+lessc ~/Development/woodys-site/src/style/main.less ~/Development/woodys-site/public/style.css;
