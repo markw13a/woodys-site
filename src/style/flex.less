@@ -1,0 +1,17 @@
+.flex-base {
+	display: flex;
+
+	& > * {
+		margin: auto;
+	}
+}
+
+.flex-row {
+	.flex-base();
+	flex-direction: row;
+}
+
+.flex-column {
+	.flex-base();
+	flex-direction: column;
+}

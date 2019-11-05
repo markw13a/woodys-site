@@ -1,0 +1,22 @@
+@woodys-blue: #0069CC;
+@woodys-orange: #FF6600;
+@woodys-orange-shade: darken(@woodys-orange, 20%);
+
+.quote-widget {
+	background-color: @woodys-blue;
+	color: #fff;
+
+	.flex-column();
+	
+	.weight-and-size-inputs {
+		.flex-row();
+	}
+
+	.quote-button {
+		background-color: @woodys-orange;
+		border: none;
+		border-radius: 5%;
+		color: #fff;
+		.sub-header();
+	}
+}

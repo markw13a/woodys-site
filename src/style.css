@@ -1,0 +1,55 @@
+.quote-widget {
+  background-color: #0069CC;
+  color: #fff;
+  display: flex;
+  flex-direction: column;
+}
+.quote-widget > * {
+  margin: auto;
+}
+.quote-widget .weight-and-size-inputs {
+  display: flex;
+  flex-direction: row;
+}
+.quote-widget .weight-and-size-inputs > * {
+  margin: auto;
+}
+.quote-widget .quote-button {
+  background-color: #FF6600;
+  border: none;
+  border-radius: 5%;
+  color: #fff;
+  font-size: 1.333rem;
+}
+.flex-base {
+  display: flex;
+}
+.flex-base > * {
+  margin: auto;
+}
+.flex-row {
+  display: flex;
+  flex-direction: row;
+}
+.flex-row > * {
+  margin: auto;
+}
+.flex-column {
+  display: flex;
+  flex-direction: column;
+}
+.flex-column > * {
+  margin: auto;
+}
+html {
+  font-size: 20px;
+}
+.sub-header {
+  font-size: 1.333rem;
+}
+.header {
+  font-size: 1.777rem;
+}
+.logo {
+  height: 32px;
+}
