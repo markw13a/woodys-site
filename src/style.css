@@ -21,6 +21,32 @@
   color: #fff;
   font-size: 1.333rem;
 }
+.quote-widget .input-address-autocomplete {
+  position: relative;
+}
+.quote-widget .input-address-autocomplete .suggestions-list-container {
+  position: relative;
+}
+.quote-widget .input-address-autocomplete .suggestion-list {
+  position: absolute;
+  margin: 0;
+  padding: 0;
+  z-index: 1;
+  background-color: #fff;
+  color: #000;
+  border: 2px solid #ccc;
+  box-shadow: 0 8px 17px rgba(0, 0, 0, 0.2);
+  overflow-y: scroll;
+}
+.quote-widget .input-address-autocomplete .suggestion-item {
+  cursor: pointer;
+  margin: 0;
+  padding: 0.5rem;
+  list-style-type: none;
+}
+.quote-widget .input-address-autocomplete .suggestion-item:hover {
+  background-color: #f0f0f0;
+}
 .flex-base {
   display: flex;
 }
@@ -42,7 +68,7 @@
   margin: auto;
 }
 html {
-  font-size: 20px;
+  font-size: 18px;
 }
 .sub-header {
   font-size: 1.333rem;

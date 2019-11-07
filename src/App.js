@@ -1,7 +1,7 @@
 import React from 'react';
 import './style.css';
 
-import QuoteWidget from './components/QuoteWidget';
+import QuoteWidget from './js/QuoteWidget';
 
 const App = () => {
 	return (

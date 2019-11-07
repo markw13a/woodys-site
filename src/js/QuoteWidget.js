@@ -1,27 +1,30 @@
-import React, {useState} from 'react';
-
-// Fetches postcode data from outside API as user enters postcode
-const AddressInputWithAutoComplete = ({address, setAddress, label}) => {
-	return (
-		<input 
-			value={address}
-			onChange={e => setAddress(e.target.value)}
-			defaultValue={label} 
-		/>
-	);
-};
+import React, {useEffect, useState} from 'react';
 
 const QuoteWidget = () => {
 	const [weight, setWeight] = useState();
 	const [length, setLength] = useState();
 	const [width, setWidth] = useState();
 	const [height, setHeight] = useState();
+	const [deliveryAddress, setDeliveryAddress] = useState();
+	const [recipientAddress, setRecipientAddress] = useState();
 
 	// TODO: request pricing information and work in to this
 	const calculateQuote = () => 15;
 
 	return (
 		<div className="quote-widget">
+			<div className="postcode-inputs">
+				<InputWithAddressLookUp 
+					value={deliveryAddress} 
+					setValue={setDeliveryAddress} 
+					label="Deliver to postcode" 
+				/>
+				<InputWithAddressLookUp 
+					value={recipientAddress} 
+					setValue={setRecipientAddress} 
+					label="Collect from postcode" 
+				/>
+			</div>
 			<div className="weight-and-size-inputs">
 				<label>
 					<input value={weight} onChange={e => setWeight(e.target.value)} />

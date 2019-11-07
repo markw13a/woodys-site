@@ -21,3 +21,6 @@
 npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
+
+# contains keys and passwords that I do not want to be publically tracked
+PRIVATE.js

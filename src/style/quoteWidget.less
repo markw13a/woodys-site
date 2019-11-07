@@ -19,4 +19,49 @@
 		color: #fff;
 		.sub-header();
 	}
+
+	// TODO: clean this up
+	.input-address-autocomplete {
+		position: relative;
+
+		// Slightly awkward way of ensuring that absolutely
+		// positioned suggestion list appears underneath input
+		.suggestions-list-container {
+			position: relative;
+		}
+
+		.suggestion-list {
+			// Display under input field
+			position: absolute;
+
+			margin: 0;
+			padding: 0;
+
+			// Display above other elements
+			z-index: 1;
+
+			background-color: #fff;
+			color: #000;
+
+			border: 2px solid #ccc;
+			box-shadow: 0 8px 17px rgba(0, 0, 0, 0.2);
+
+			// Restrict max-size of suggestion list
+			// Display vertical scroll bars
+			overflow-y: scroll;
+			// max-height: 7.5rem;
+		}
+
+		.suggestion-item {
+			cursor: pointer;
+			margin: 0;
+			padding: 0.5rem;
+
+			list-style-type: none;
+
+			&:hover {
+				background-color: #f0f0f0;
+			}
+		}
+	}
 }
