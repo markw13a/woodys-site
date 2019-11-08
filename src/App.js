@@ -6,10 +6,12 @@ import QuoteWidget from './js/QuoteWidget';
 const App = () => {
 	return (
 		<div className="App">
-			<a href="/">
-				<img src="/logo.png" className="logo" alt="logo" />
-			</a>
-			<QuoteWidget />
+			<div className="Page">
+				<a href="/">
+					<img src="/logo.png" className="logo" alt="logo" />
+				</a>
+				<QuoteWidget />
+			</div>
 		</div>
 	);
 };

@@ -1,18 +1,62 @@
-.quote-widget {
+.quote-widget-container {
   background-color: #0069CC;
   color: #fff;
-  display: flex;
-  flex-direction: column;
+  padding: 1rem;
+  display: grid;
+  grid-template-areas: '. tagline .' '. quoteWidget .';
+  grid-row-gap: 1rem;
 }
-.quote-widget > * {
-  margin: auto;
+.quote-widget-container .tagline {
+  grid-area: tagline;
 }
-.quote-widget .weight-and-size-inputs {
+.quote-widget-container .quote-widget {
+  grid-area: quoteWidget;
+}
+.quote-widget {
+  display: grid;
+  grid-template-areas: 'postcodeAndWeightInputContainer' 'weightAndSizeInputContainer' 'quoteButtonContainer';
+  grid-row-gap: 1rem;
+  border: 1px solid #004f99;
+  border-radius: 5px;
+  padding: 1rem 0.5rem;
+}
+.quote-widget .postcode-and-weight-input-container {
+  grid-area: postcodeAndWeightInputContainer;
+}
+.quote-widget .weight-and-size-input-container {
+  grid-area: weightAndSizeInputContainer;
+}
+.quote-widget .quote-button-container {
+  grid-area: quoteButtonContainer;
   display: flex;
   flex-direction: row;
+  justify-content: center;
 }
-.quote-widget .weight-and-size-inputs > * {
+.quote-widget .quote-button-container > * {
   margin: auto;
+}
+.quote-widget .weight-and-size-input-container,
+.quote-widget .postcode-and-weight-input-container {
+  display: flex;
+  flex-direction: row;
+  flex-basis: flex-start;
+  padding-bottom: 1rem;
+}
+.quote-widget .weight-and-size-input-container > *,
+.quote-widget .postcode-and-weight-input-container > * {
+  margin: auto;
+}
+.quote-widget .weight-and-size-input-container label,
+.quote-widget .postcode-and-weight-input-container label {
+  width: 12rem;
+}
+.quote-widget .weight-and-size-input,
+.quote-widget .postcode-input {
+  width: 5em;
+}
+.quote-widget .weight-and-size-input,
+.quote-widget .postcode-input {
+  margin: 0 0.75em;
 }
 .quote-widget .quote-button {
   background-color: #FF6600;
@@ -20,6 +64,8 @@
   border-radius: 5%;
   color: #fff;
   font-size: 1.333rem;
+  cursor: pointer;
+  padding: 0.5rem 1rem;
 }
 .quote-widget .input-address-autocomplete {
   position: relative;
