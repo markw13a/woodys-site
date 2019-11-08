@@ -1,7 +1,7 @@
 @woodys-blue: #0069CC;
-@woodys-blue-shade: darken(@woodys-blue, 10%);
 @woodys-orange: #FF6600;
 @woodys-orange-shade: darken(@woodys-orange, 20%);
+@woodys-grey: #EEE;
 
 .quote-widget-container {
 	background-color: @woodys-blue;
@@ -11,8 +11,8 @@
 	// Little hack to center the input elements in their container div
 	display: grid;
 	grid-template-areas: 
-		'. tagline .'
-		'. quoteWidget .';
+		'. . . tagline . . .'
+		'. . . quoteWidget . . .';
 	grid-row-gap: 1rem;
 
 	.tagline {
@@ -45,13 +45,14 @@
 		justify-content: center;
 	}
 
-	border: 1px solid @woodys-blue-shade;
-	border-radius: 5px;
+	border: 1px solid @woodys-grey;
+	// Only have line on top
+	// Looks a bit too empty if div is completely enclosed
+	border-width: 1px 0 0 0;
 	padding: 1rem 0.5rem;
 
 	.weight-and-size-input-container, .postcode-and-weight-input-container {
 		.flex-row();
-		flex-basis: flex-start;
 		padding-bottom: 1rem;
 
 		// Give all input + label blocks uniform width so they form neater grid
@@ -69,13 +70,7 @@
 	}
 
 	.quote-button {
-		background-color: @woodys-orange;
-		border: none;
-		border-radius: 5%;
-		color: #fff;
 		.sub-header();
-
-		cursor: pointer;
 		padding: 0.5rem 1rem;
 	}
 

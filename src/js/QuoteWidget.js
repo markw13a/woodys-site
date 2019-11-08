@@ -1,4 +1,4 @@
-import React, {useEffect, useState} from 'react';
+import React, {useState} from 'react';
 
 const QuoteWidget = () => {
 	const [weight, setWeight] = useState();
@@ -9,11 +9,13 @@ const QuoteWidget = () => {
 	const [recipientAddress, setRecipientAddress] = useState();
 
 	// TODO: request pricing information and work in to this
+	// Is that kind of formula something that should be publically visible?
+	// Could be safer to do that sort of thing on the back-end
 	const calculateQuote = () => 15;
 
 	return (
 		<div className="quote-widget-container">
-			<div className="header tagline">
+			<div className="sub-header tagline">
 				Reliable delivery across the UK
 			</div>
 			<div className="quote-widget">
@@ -37,42 +39,38 @@ const QuoteWidget = () => {
 						/>
 					</label>
 					<label>
-						Weight
+						Weight(kg)
 						<input 
 							className="weight-and-size-input"
 							value={weight} 
 							onChange={e => setWeight(e.target.value)} 
 						/>
-						kg
 					</label>
 				</div>
 				<div className="weight-and-size-input-container">
 					<label>
-						Length
+						Length(cm)
 						<input
 							className="weight-and-size-input"
 							value={length} 
 							onChange={e => setLength(e.target.value)} 
 						/>
-						cm
 					</label>
 					<label>
-						Width
+						Width (cm)
 						<input
 							className="weight-and-size-input"
 							value={width} 
 							onChange={e => setWidth(e.target.value)} 
 						/>
-						cm
 					</label>
 					<label>
-						Height
+						Height(cm)
 						<input
 							className="weight-and-size-input"
 							value={height} 
 							onChange={e => setHeight(e.target.value)} 
 						/>
-						cm
 					</label>
 				</div>
 				<div className="quote-button-container">
